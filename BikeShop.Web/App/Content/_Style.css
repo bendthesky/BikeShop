@@ -1,0 +1,109 @@
+﻿body {
+   
+}
+
+a:link {
+    color:#262626;
+}
+
+a:hover {
+    color:#808080;
+    text-decoration:none;
+}
+
+a:active {
+    color:#262626;
+}
+
+a:visited {
+    color:#262626;
+}
+
+.row {
+    background-color:ghostwhite;
+}
+
+#headerDiv {
+    position:fixed;
+    z-index:10;
+    width:100%;
+    background-color:#262626;
+    border-bottom: solid #111111 1px;
+    color:ghostwhite;
+}
+
+#logo {
+    padding:10px;
+    color:ghostwhite;
+}
+
+#paddingDiv {
+    width:100%;
+    height:64px;
+}
+
+#navButtons {
+    position:relative;
+    background-color:ghostwhite;
+    text-align:center;
+}
+
+#headerContent {
+    background-color:#262626;
+}
+
+#accountButtons {
+    display:inline;
+    float:right;
+    padding:15px;
+    font-size:1.2em;
+}
+
+#signUp {
+    padding:10px;
+    color:ghostwhite;
+}
+
+.carousel-inner{
+    height:320px;
+    width:100%;
+}
+
+.item {
+
+}
+
+#view {
+    background-color:ghostwhite;
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+#showcaseDiv {
+    border:solid #ddd 1px;
+    padding-top:20px;
+}
+
+#homeDiv {
+    background-color:ghostwhite;
+}
+
+#specs {
+    border:solid #ddd 1px;
+}
+
+#commentDiv {
+    margin:5%;
+}
+
+#spacePad {
+    width:100%;
+    height:50px;
+}

@@ -1,0 +1,22 @@
+﻿<div class="listDiv">
+    <a href="#/Add"><div class="btn btn-success"> Add a new bike </div></a>
+    <div class="row">
+        <div class="col-md-12" id="showcaseDiv">
+            <div ng-show="loading" style="text-align:center;">Loading</div>
+            <div class="col-md-4" data-ng-repeat="bike in listBikes | filter: nameText" id="showcase">
+                <a href="#/Details/{{bike.Id}}">
+                    <div>
+                        {{bike.Brand}}&nbsp;{{bike.Model}}
+                        <br />
+                        <img src="{{bike.Pictures[0].Url}}" style="height:150px; width:175px;" /><br />
+                    </div>
+                </a>
+                <p>{{bike.Price}}</p>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <div class="btn" data-ng-click="page('prev')"> << Prev </div><div class="btn" ng-click="page('next')"> Next >> </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,82 @@
+﻿<div id="homeDiv">
+    <div class="row">
+        <h3 style="margin-left:5%;">Featured Bikes:</h3>
+        <div class="col-md-12" id="showcaseDiv">
+            <div ng-show="loading" style="text-align:center;">Loading</div>
+            <div class="col-md-4" data-ng-repeat="bike in showcaseBikes" id="showcase" >
+                <a href="#/Details/{{bike.Id}}">
+                    <div>
+                        {{bike.Brand}}&nbsp;{{bike.Model}}
+                        <br />
+                        <img src="{{bike.Pictures[0].Url}}" style="height:150px; width:175px;" /><br />
+                    </div>
+                </a>
+                <p>${{bike.Price}}</p>
+            </div>
+        </div>
+            <div style="text-align:center;">
+                <div style="width:100%;">
+                    <div class="btn" data-ng-click="page('prev')"> << Prev </div><span data-ng-repeat="pages in pageArray" data-ng-click="page(pages.iter)" style="cursor:pointer;">{{pages.pageNum}}&nbsp;</span><div class="btn" ng-click="page('next')"> Next >> </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h1 style="text-align:center;">Welcome to The Bike Shoppe!</h1>
+            <div style="width:80%; margin-left:10%;">
+                <p>We make quality our first priority, and as such we only carry products from the best companies in the industry. Choose The Bike Shoppe for all for your cycling needs!</p>
+                
+                <h5>Brands:</h5>
+                <img src="http://wheelsmfg.com/media/wysiwyg/manufacturer_logos/hangerManufactures.jpg" style="width:100%; height:auto;" />
+                <br /><br /><br />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1>Promos:</h1>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active" style="width:100%; height:auto;">
+                <img src="/Images/cyclist-mountain-bike-man-hills-nature.jpg" alt="Mountain bikes for all your nature adventures" style="width:100%; height:auto;">
+                <div class="carousel-caption" style="position:absolute; top:20px; left:-100px;">
+                    <h1>Mountain bikes for all your nature adventures</h1>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/Images/street bike.jpg" alt="Sleek street bikes for traversing your city" style="position:relative; top:-240px;">
+                <div class="carousel-caption" style="position:absolute; top:150px; left:400px;">
+                    <h1>Sleek street bikes for traversing your city</h1>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/Images/velodromewideBMX1.jpg" alt="Specialty BMX bikes to get you to the top of the competition" style="width:100%; height:auto;">
+                <div class="carousel-caption" style="position:absolute; top:150px; left:0px;">
+                    <h1>Specialty BMX bikes to get you to the top of the competition</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+
+</div>

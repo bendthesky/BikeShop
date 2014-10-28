@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="App">
+<head>
+    <title></title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="Content/_Style.css" rel="stylesheet" />
+    <link href="Content/Login.css" rel="stylesheet" />
+    <link href="Content/RegistrationForm.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/NavbarBottom.css" rel="stylesheet" />
+</head>
+<body>
+    <img src="/Images/epic mountain bike.jpg" style="position:fixed; width:100%; height:100%;">
+    
+    <div id="headerDiv">
+        <div class="row" id="headerContent">
+            <a href="#/" class="col-md-offset-1 col-md-2"><div id="logo"><img src="/Images/TBSlogo.png" style="height:40px; width:auto;" /></div></a>
+
+            <div class="col-md-offset-6 col-md-2" id="accountButtons">
+                <a href="#/SignUp" id="signUp">Sign Up</a><a href="#/Login" id="login"><div class="btn btn-default"> Log In </div></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="paddingDiv">
+        <br /><br /><br />
+    </div>
+    <table id="navButtons" class="table-bordered col-md-offset-1 col-md-10">
+        <tr>
+            <td>
+                <a href="#/List"><div id="navButton"> Products </div></a>
+            </td>
+            <td>
+                <input type="search" placeholder="Search The Bike Shoppe" style="width:400px;" ng-model="nameText" />
+                <a href="#/List"><div class="btn"><i class="glyphicon glyphicon-search"></i></div></a>
+
+                <div class="btn btn-warning" style="float:right; margin-right:25px;"><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;View My Cart </div>
+            </td>
+        </tr>
+    </table>
+    <div data-ng-view class="col-md-offset-1 col-md-10" id="view">
+
+    </div>
+    <div id="spacePad"></div>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">About Us</a></li>
+                <li><a href="#/ContactUs">Contact</a></li>
+                <li><a href="#/HelpRequest">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+      
+    
+
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <script src="../Scripts/jquery.validate.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="Scripts/_Script.js"></script>
+    <script src="Scripts/Route.js"></script>
+    <script src="Scripts/AdminController.js"></script>
+    <script src="Scripts/DetailsController.js"></script>
+    <script src="Scripts/Factory.js"></script>
+    <script src="Scripts/HomeController.js"></script>
+    <script src="Scripts/LoginController.js"></script>
+    <script src="Scripts/ListController.js"></script>
+    <script src="Scripts/UpdateController.js"></script>
+    <script src="Scripts/UserController.js"></script>
+    <script src="Scripts/Services.js"></script>
+    <script src="Scripts/Paging.js"></script>
+    <script src="Scripts/_Login.js"></script>
+    <script src="Scripts/ContactUsController.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="Scripts/_Email.js"></script>
+</body>
+</html>

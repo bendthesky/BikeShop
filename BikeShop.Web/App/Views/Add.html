@@ -1,0 +1,103 @@
+﻿<div id="addDiv">
+    <input type="text" data-ng-model="bike.Brand" placeholder="Enter Brand" id="bikeBrand"/>
+    <input type="text" data-ng-model="bike.Model" placeholder="Enter Model" id="bikeModel" /><br />
+    <input type="text" data-ng-model="bike.Type" placeholder="Enter Type" id="bikeType" />
+    <input type="number" data-ng-model="bike.Price" placeholder="Enter Price" id="bikePrice" /><br />
+    <input type="text" data-ng-model="bike.Picture.Url" placeholder="Picture URL" id="bikePicture" /><br />
+    <textarea rows="5" cols="40" ng-model="bike.Description" placeholder="Describe the bike" id="bikeDesc" ></textarea>
+    <input type="button" value="Add" ng-click="createBike()" /><br />
+
+    <!--<pre>Sorting predicate = {{predicate}}; reverse = {{reverse}} </pre>-->
+    <a href="" ng-click="predicate=''"><i class="fa fa-refresh"></i></a>
+    <table class="table table-hover table-stripted">
+        <tr>
+            <th>
+                <a href="" ng-click="predicate = 'Model'; reverse = false"><i class="fa fa-sort-alpha-asc"></i></a>
+                (<a href="" ng-click="predicate ='-Model'; reverse= false"><i class="fa fa-sort-alpha-desc"></i></a>)
+            </th>
+
+            <th>
+                <a href="" ng-click="predicate = 'Type'; reverse = false"><i class="fa fa-sort-alpha-asc"></i></a>
+                (<a href="" ng-click="predicate = '-Type'; reverse = false "><i class="fa fa-sort-alpha-desc"></i></a>)
+            </th>
+            <th>
+                <a href="" ng-click="predicate = 'Price'; reverse=!reverse"><i class="fa fa-usd"></i></a>
+            </th>
+        </tr>
+        <tr ng-repeat="bike in bikes | filter: nameText | orderBy: predicate: reverse">
+            <!--| offset: currentPage*itemsPerPage| limitTo: itemsPerPage-->
+            <td id="model"> <a href="#/Details/{{bike.Id}}">{{bike.Brand}}&nbsp;{{bike.Model}} </a></td>
+            <td id="type"> {{bike.Type}}</td>
+            <td id="price"> {{bike.Price}} </td>
+            <td id="picture"> <img ng-src="{{bike.Pictures[0].Url}}" style="height: 100px; width: 100px" /></td>
+            <td><button type="button" ng-click="showBike(bike.Id)"><i class="fa fa-pencil"></i></button></td>
+
+        </tr>
+
+    </table>
+</div>
+
+<!--Modal Here-->
+<div class="modal fade" id="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Editing</h4>
+            </div>
+            <div ng-show="content">
+                <div class="modal-body">
+
+
+                    <p>
+                        Brand:<br />
+                        <input class="input-sm" type="text" ng-model="bike.Brand" />
+                    </p>
+
+
+                    <p>
+                        Model:<br />
+                        <input class="input-sm" type="text" ng-model="bike.Model" />
+                    </p>
+
+
+                    <p>
+                        Type:<br />
+                        <input class="input-sm" type="text" ng-model="bike.Type" />
+                    </p>
+
+
+                    <p>
+                        $:<br />
+                        <input class="input-sm" type="number" ng-model="bike.Price" />
+                    </p>
+
+                    <div data-ng-repeat="picture in bike.Pictures">
+                        <img src="{{picture.Url}}" style="width:150px; height:auto; margin:15px;" /> <div class="btn btn-danger" data-ng-click="deletePicture(id)"><i class="fa fa-times"></i></div>
+                    </div>
+                    <input type="text" data-ng-model="bike.Picture.Url" placeholder="Picture Url"/><div class="btn btn-default" data-ng-click="addPicture(id)"> Add Picture </div>
+
+                        <p>Description: </p>
+                        <textarea cols="40" rows="5" class="input-sm" ng-model="bike.Description"></textarea>
+
+                    </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" ng-click="deleteBike(bike.Id)" style="float:left;"><i class="fa fa-trash-o"></i></button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="updateBike(bike.Id)">Save changes</button>
+                </div>
+            </div>
+            <div ng-show="thePictures">
+                <div class="modal-body">
+                    <form>
+                        <input type="text" ng-model="Picture.Url" placeholder="Picture URL" />
+                        <input type="submit" ng-click="addPicture()" />
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F187AAEF-D6A9-42A5-B6C2-B75693B98E82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BikeShop.Data</RootNamespace>
+    <AssemblyName>BikeShop.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201408162150064_InitialMigration.cs" />
+    <Compile Include="Migrations\201408162150064_InitialMigration.Designer.cs">
+      <DependentUpon>201408162150064_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408172320102_AddBikesNInfo.cs" />
+    <Compile Include="Migrations\201408172320102_AddBikesNInfo.Designer.cs">
+      <DependentUpon>201408172320102_AddBikesNInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408181640050_BikeShopMigration.cs" />
+    <Compile Include="Migrations\201408181640050_BikeShopMigration.Designer.cs">
+      <DependentUpon>201408181640050_BikeShopMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408182135445_AddedComment.cs" />
+    <Compile Include="Migrations\201408182135445_AddedComment.Designer.cs">
+      <DependentUpon>201408182135445_AddedComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408191543472_AddPictures.cs" />
+    <Compile Include="Migrations\201408191543472_AddPictures.Designer.cs">
+      <DependentUpon>201408191543472_AddPictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408191729288_AddedComments.cs" />
+    <Compile Include="Migrations\201408191729288_AddedComments.Designer.cs">
+      <DependentUpon>201408191729288_AddedComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408191838216_I.cs" />
+    <Compile Include="Migrations\201408191838216_I.Designer.cs">
+      <DependentUpon>201408191838216_I.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408191854004_AddedAgain.cs" />
+    <Compile Include="Migrations\201408191854004_AddedAgain.Designer.cs">
+      <DependentUpon>201408191854004_AddedAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408191903526_l.cs" />
+    <Compile Include="Migrations\201408191903526_l.Designer.cs">
+      <DependentUpon>201408191903526_l.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408192008387_a.cs" />
+    <Compile Include="Migrations\201408192008387_a.Designer.cs">
+      <DependentUpon>201408192008387_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408192311017_SecondImigration.cs" />
+    <Compile Include="Migrations\201408192311017_SecondImigration.Designer.cs">
+      <DependentUpon>201408192311017_SecondImigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BikeShop.Data.Models\BikeShop.Data.Models.csproj">
+      <Project>{043c3ee7-b4af-49ac-9021-513aab3fe3a1}</Project>
+      <Name>BikeShop.Data.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201408162150064_InitialMigration.resx">
+      <DependentUpon>201408162150064_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408172320102_AddBikesNInfo.resx">
+      <DependentUpon>201408172320102_AddBikesNInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408181640050_BikeShopMigration.resx">
+      <DependentUpon>201408181640050_BikeShopMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408182135445_AddedComment.resx">
+      <DependentUpon>201408182135445_AddedComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408191543472_AddPictures.resx">
+      <DependentUpon>201408191543472_AddPictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408191729288_AddedComments.resx">
+      <DependentUpon>201408191729288_AddedComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408191838216_I.resx">
+      <DependentUpon>201408191838216_I.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408191854004_AddedAgain.resx">
+      <DependentUpon>201408191854004_AddedAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408191903526_l.resx">
+      <DependentUpon>201408191903526_l.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408192008387_a.resx">
+      <DependentUpon>201408192008387_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408192311017_SecondImigration.resx">
+      <DependentUpon>201408192311017_SecondImigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

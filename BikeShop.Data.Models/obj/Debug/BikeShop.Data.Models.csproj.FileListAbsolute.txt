@@ -1,0 +1,14 @@
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\BikeShop.Data.Models.dll.config
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\BikeShop.Data.Models.dll
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\BikeShop.Data.Models.pdb
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\EntityFramework.dll
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\EntityFramework.xml
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\GroupWork\BikeShop\BikeShop.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\GroupWork\BikeShop\BikeShop.Data.Models\obj\Debug\BikeShop.Data.Models.dll
+C:\GroupWork\BikeShop\BikeShop.Data.Models\obj\Debug\BikeShop.Data.Models.pdb
+C:\GroupWork\BikeShop\BikeShop.Data.Models\obj\Debug\BikeShop.Data.Models.csprojResolveAssemblyReference.cache

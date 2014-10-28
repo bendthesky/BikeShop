@@ -1,0 +1,42 @@
+﻿<div id="detailsDiv">
+    <h3>{{bike.Brand}} {{bike.Model}}</h3>
+    <div class="row">
+        <div class="col-md-7" style="text-align:center">
+            <img src="{{bike.Pictures[0].Url}}" style="width:85%; height:auto;" />
+        </div>
+        <div class="col-md-4" id="specs">
+            <br /><br />
+            <h4>Type: {{bike.Type}}</h4>
+            <br />
+            <h4>${{bike.Price}}</h4>
+            <p>{{bike.Description}}</p>
+            <br />
+            <div class="btn btn-warning"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add to Cart </div>
+            <div class="row" style="position:relative; height:150px; overflow-x:scroll; overflow-y:hidden; margin-left:15px; margin-right:15px;">
+                <div style="width:600px;">
+                    <img data-ng-repeat="picture in bike.Pictures" src="{{picture.Url}}" style="height:125px; width:175px; padding:15px; float:left;" />
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+
+    <div class="row" id="commentDiv">
+        <p>Submit a review</p>
+        <input type="text" ng-model="Comment.User" placeholder="Username" /><br /><br />
+        <textarea rows="5" cols="40" ng-model="Comment.Body" placeholder="Write a review"></textarea><br />
+        <input type="button" class="btn btn-success" value="Submit" ng-click="createComment()" />
+        <h2>User Reviews</h2>
+        <table class="table-bordered" style="width:100%">
+            <tr data-ng-repeat="comment in bike.Comments">
+                <td>
+                    <h4>{{comment.User}}</h4>
+                    <p>{{comment.Body}}</p>
+                    <br />
+                    <input type="button" value="Delete" ng-click="deleteComment(id)" />
+                    <br />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
