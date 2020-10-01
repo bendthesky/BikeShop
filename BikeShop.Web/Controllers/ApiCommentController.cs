@@ -28,7 +28,11 @@ namespace BikeShop.Web.Controllers
         [HttpDelete]
         public IHttpActionResult DELETE(int id)
         {
+            // Valid Id check
+            if(id > 0)
+            {
             _adapter.DeleteComment(id);
+            }
             return Ok();
         }
     }
